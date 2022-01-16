@@ -44,10 +44,10 @@ public class HrRestController {
 		return hrApplication.hireEmployee(request);
 	}
 
-	@PostMapping("{identity}")
+	@PutMapping("{identity}")
 	public EmployeeResponse updateEmployee(@PathVariable @TcKimlikNo String identity,
-			@RequestBody @Validated UpdateEmployeeRequest request) {
-		return hrApplication.updateEmployee(identity,request);
+	   @RequestBody @Validated UpdateEmployeeRequest request) {
+	        return hrApplication.updateEmployee(identity,request);
 	}
 
 	@DeleteMapping("{identity}")
