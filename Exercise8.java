@@ -26,6 +26,10 @@ public class Exercise8 {
 
 	public static void main(String[] args) {
 		// Find the minimum, the maximum and the average salaries
+		
+		var summary = employees.stream().collect(Collectors.summarizingDouble(Employee::getSalary));
+		System.err.println(summary);
+		
 		var minSalary= employees.stream()
 		 		 .mapToDouble(Employee::getSalary)
 		 		 .min()
